@@ -1,0 +1,11 @@
+{
+  "name": "trimtime",
+  "description": "Plataforma WEB de agendamento de corte de cabelo.",
+  "scripts": {
+    "server": "json-server --watch server.json --port 3000"
+  },
+
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.21"
+  }
+}

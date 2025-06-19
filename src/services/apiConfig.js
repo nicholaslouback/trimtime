@@ -1,5 +1,5 @@
-export const apiCOnfig = {
+export const apiConfig = {
   baseURL: "http://localhost:3000",
 }
 
-`${apiConfig.baseURL}/schedule`
+  

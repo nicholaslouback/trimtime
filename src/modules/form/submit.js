@@ -36,6 +36,7 @@ form.onsubmit = async (event) => {
       name,
       when,
     })
+
   } catch (error) {
     alert("Não foi possível realizar o agendamento!")
   }

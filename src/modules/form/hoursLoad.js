@@ -22,7 +22,7 @@ export function hoursLoad({ date, dailySchedules }) {
       hour,
       available,
     }
-
+    
   })
 
   opening.forEach(({hour, available}) => {

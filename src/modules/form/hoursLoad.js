@@ -1,6 +1,6 @@
 import dayjs from "dayjs"
-import { openingHours } from "../../utils/openingHours"
-import { hoursClick } from "./hoursClick"
+import { openingHours } from "../../utils/openingHours.js"
+import { hoursClick } from "./hoursClick.js"
 
 const hours = document.getElementById("hours")
 
@@ -9,14 +9,14 @@ export function hoursLoad({ date, dailySchedules }) {
   hours.innerHTML = ""
 
   const unavailableHours = dailySchedules.map((schedule) => 
-    dayjs(schedule.when).format("HH-mm"))
+    dayjs(schedule.when).format("HH:mm"))
 
   const opening = openingHours.map((hour) =>{
-    const [sheduleHour] = hour.split(":")
+    const [scheduleHour] = hour.split(":")
 
-    const isHourPast = dayjs(date).add(sheduleHour, "Hour").isBefore(dayjs())
+    const isHourPast = dayjs(date).add(scheduleHour, "Hour").isBefore(dayjs())
 
-    const available = ! unavailableHours.includes(hour) && !isHourPast
+    const available = !unavailableHours.includes(hour) && !isHourPast
 
     return {
       hour,

@@ -13,5 +13,6 @@ export async function scheduleFetchByDay({ date }) {
     return dailySchedules 
   } catch (error) {
     alert("Não foi possível buscar os agendamentos.")
+    return []
   }
 }
